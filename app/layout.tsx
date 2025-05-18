@@ -21,15 +21,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
-          <AuthProvider>
-            <LanguageProvider>
+          <LanguageProvider>
+            <AuthProvider>
               <ToastProvider>
                 {children}
                 <Toaster />
                 <AIAssistant />
               </ToastProvider>
-            </LanguageProvider>
-          </AuthProvider>
+            </AuthProvider>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

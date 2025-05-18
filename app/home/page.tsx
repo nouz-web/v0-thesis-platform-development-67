@@ -45,7 +45,7 @@ export default function HomePage() {
             />
             <div className="hidden md:block">
               <h1 className="text-xl font-bold text-slate-800">{t("common.welcome")}</h1>
-              <p className="text-sm text-slate-600">University 4.0</p>
+              <p className="text-sm text-slate-600"> University Khenchela 4.0 </p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -204,7 +204,7 @@ export default function HomePage() {
                       </Badge>
                     </div>
                     <p className="text-sm text-slate-600 mt-1">
-                      The system will be under maintenance tonight from 2 AM to 4 AM.
+                      The  will be under maintenance tonight from 2 AM to 4 AM.
                     </p>
                   </div>
 
@@ -277,7 +277,7 @@ export default function HomePage() {
                 </li>
                 <li>
                   <Link href="#" className="hover:text-white">
-                    Contact Us
+                    Contact 
                   </Link>
                 </li>
               </ul>
@@ -287,7 +287,7 @@ export default function HomePage() {
               <ul className="space-y-2 text-sm text-slate-300">
                 <li>Version: 1.0.0</li>
                 <li>Last Updated: May 9, 2023</li>
-                <li>© 2023 Abbas Laghrour University</li>
+                <li>© 2025 Abbas Laghrour University</li>
                 <li>All Rights Reserved</li>
               </ul>
             </div>
