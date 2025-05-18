@@ -1,35 +1,36 @@
 import type React from "react"
 import "./globals.css"
+import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
 import { LanguageProvider } from "@/components/language-provider"
+import { ThemeProvider } from "@/components/theme-provider"
+import { ToastProvider, Toaster } from "@/components/simple-toast"
+import { AIAssistant } from "@/components/ai-assistant"
 import { AuthProvider } from "@/components/auth-provider"
-import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
-  title: "Absence Management Platform | Abbas Laghrour University",
-  description: "A modern solution for tracking and managing student attendance",
+export const metadata: Metadata = {
+  title: "Absence Management Platform",
+  description: "A platform for managing student absences and attendance",
     generator: 'v0.dev'
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={inter.className}>
-        <AuthProvider>
-          <LanguageProvider>
-            <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-              {children}
-              <Toaster />
-            </ThemeProvider>
-          </LanguageProvider>
-        </AuthProvider>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <AuthProvider>
+            <LanguageProvider>
+              <ToastProvider>
+                {children}
+                <Toaster />
+                <AIAssistant />
+              </ToastProvider>
+            </LanguageProvider>
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
